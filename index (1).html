@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customized T-Shirt Order Form</title>
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <form onsubmit="return validateForm()">
+        <h1><u>Customized T-Shirt Order Form</u></h1>
+
+        <figure>
+            <img src="./product-jpeg.jpg" alt="Custom T-Shirt" style="width: 50%; max-width: 300px;">
+            <figcaption>Design Your Own T-Shirt</figcaption>
+        </figure>
+
+        <details>
+            <summary>T-Shirt Details</summary>
+            <p>Premium Fabric</p>
+            <p>Various Colors Available</p>
+            <p>Custom Printing Options</p>
+        </details>
+
+        <div>
+            <label for="tagline">Tagline on the Shirt:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline here">
+        </div>
+
+        <div>
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+                <option value="2xlarge">2X-Large</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+
+        <div>
+            <label for="delivery_date">Delivery Date:</label>
+            <input type="date" id="delivery_date" name="delivery_date">
+        </div>
+
+        <fieldset>
+            <legend>Delivery Details</legend>
+            <div>
+                <label for="street_address">Street Address:</label>
+                <input type="text" id="street_address" name="street_address">
+            </div>
+
+            <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+            </div>
+
+            <div>
+                <label for="zipcode">Zip Code:</label>
+                <input type="number" id="zipcode" name="zipcode">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <input type="submit" value="Submit">
+        </fieldset>
+
+        <div id="receipt" style="display: none;">
+            <h2>Order Receipt</h2>
+            <p><strong>Date:</strong> <span id="receiptDate"></span></p>
+            <p><strong>Tagline:</strong> <span id="receiptTagline"></span></p>
+        </div>
+    </form>
+</body>
+
+</html>
